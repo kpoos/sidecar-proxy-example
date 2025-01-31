@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DOCKER_TARGET_PLATFORM: linux/arm/v7
-      DOCKER_REGISTRY: hub.docker.com
-      DOCKER_IMAGE: kpoos/nginx-proxy
+      DOCKER_REGISTRY: kpoos  #hub.docker.com
+      DOCKER_IMAGE: nginx-proxy
 
     steps:
     - name: Check out the repo
