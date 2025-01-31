@@ -55,11 +55,11 @@ jobs:
     - name: Run Buildx (push image)      
       if: success()      
       run: |
-        cd nginx-proxy
+        cd ./nginx-proxy
         docker buildx build \
         --platform ${{ steps.prepare.outputs.docker_platform }} \ 
         --tag ${{ steps.prepare.outputs.docker_image }}:${{ steps.prepare.outputs.version }} \
-        --file ./Dockerfile \        --output type=image,push=true .
+        --file Dockerfile \        --output type=image,push=true .
 
 
 
