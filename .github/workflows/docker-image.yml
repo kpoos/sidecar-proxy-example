@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      with:
-        context: nginx-proxy
-        run: docker build . --file ./Dockerfile --tag my-image-name:$(date +%s)
+      run: |
+        cd nginx-proxy
+        docker build . --file ./Dockerfile --tag my-image-name:$(date +%s)
